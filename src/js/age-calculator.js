@@ -23,5 +23,14 @@ export default class AgeCalculator {
       "antarctica": 110
     };
     this.lifeExpectancy = continentMap[this.continent];
+    const lifeStyleMap = {
+      "drinker": -5,
+      "smoker": -10,
+      "drugAddict": -15,
+      "vegan": 5,
+      "healthyEater": 10,
+      "": 0
+    };
+    this.lifeExpectancy += lifeStyleMap[this.lifeStyle];
   }
 }
