@@ -10,6 +10,7 @@ export default class AgeCalculator {
     this.jupiterYears = this.age / 11.86;
     this.lifeExpectancy = 0;
     this.parseLifeExpectancy();
+    this.surpassedLifeExpectancy = this.lifeExpectancy - this.age;
   }
   parseLifeExpectancy() {
     // **based on made up data**

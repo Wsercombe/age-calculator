@@ -87,4 +87,14 @@ describe('ageCalculator', () => {
     const activeLifeExpectancy = new AgeCalculator(0, "antarctica", "", "sedentary");
     expect (activeLifeExpectancy.lifeExpectancy).toEqual(100);
   });
+
+  test('given that someone is a sedentary, drug addict from antarctica who is 50 years old, return return 35 years to live', () => {
+    const testYearsToLive = new AgeCalculator(50, "antarctica", "drugAddict", "sedentary");
+    expect (testYearsToLive.surpassedLifeExpectancy).toEqual(35);
+  });
+
+  test('given that someone is a sedentary, drug addict from antarctica who is 150 years old, return return -65 years to live', () => {
+    const testYearsToLive = new AgeCalculator(150, "antarctica", "drugAddict", "sedentary");
+    expect (testYearsToLive.surpassedLifeExpectancy).toEqual(-65);
+  });
 });
