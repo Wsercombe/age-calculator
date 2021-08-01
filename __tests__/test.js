@@ -1,5 +1,10 @@
-const sum = require('../src/sum.js');
+import AgeCalculator from '../src/js/age-calculator.js';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+
+
+describe('ageCalculator', () => {
+  test('should initialize mercury years', () => {
+    const mercuryAge = new AgeCalculator(0.24, "test", "test", "test");
+    expect (mercuryAge.mercuryYears).toEqual(1);
+    });
+  });
