@@ -15,5 +15,10 @@ describe('ageCalculator', () => {
     const marsAge = new AgeCalculator(1.88, "test", "test", "test");
     expect (marsAge.marsYears).toEqual(1);
     });
+
+  test('should initialize jupiter years', () => {
+    const jupiterAge = new AgeCalculator(11.86, "test", "test", "test");
+    expect (jupiterAge.jupiterYears).toEqual(1);
+    });
         
   });
