@@ -31,6 +31,13 @@ export default class AgeCalculator {
       "healthyEater": 10,
       "": 0
     };
+    const activityLevelMap = {
+      "active": 10,
+      "moderate": 0,
+      "sedentary": -10,
+      "": 0
+    };
     this.lifeExpectancy += lifeStyleMap[this.lifeStyle];
+    this.lifeExpectancy += activityLevelMap[this.activityLevel];
   }
 }

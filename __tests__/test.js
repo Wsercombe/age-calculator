@@ -73,4 +73,18 @@ describe('ageCalculator', () => {
     const healthyEaterLifeExpectancy = new AgeCalculator(0, "antarctica", "healthyEater", "");
     expect (healthyEaterLifeExpectancy.lifeExpectancy).toEqual(120);
   });
+  test('should add 10 years for being active', () => {
+    const activeLifeExpectancy = new AgeCalculator(0, "antarctica", "", "active");
+    expect (activeLifeExpectancy.lifeExpectancy).toEqual(120);
+  });
+
+  test('should add 0 years for being moderately active', () => {
+    const activeLifeExpectancy = new AgeCalculator(0, "antarctica", "", "moderate");
+    expect (activeLifeExpectancy.lifeExpectancy).toEqual(110);
+  });
+
+  test('should reduce 10 years for being sedentary', () => {
+    const activeLifeExpectancy = new AgeCalculator(0, "antarctica", "", "sedentary");
+    expect (activeLifeExpectancy.lifeExpectancy).toEqual(100);
+  });
 });
