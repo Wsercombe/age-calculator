@@ -7,4 +7,8 @@ describe('ageCalculator', () => {
     const mercuryAge = new AgeCalculator(0.24, "test", "test", "test");
     expect (mercuryAge.mercuryYears).toEqual(1);
     });
+  test('should initialize venus years', () => {
+    const venusAge = new AgeCalculator(0.62, "test", "test", "test");
+    expect (venusAge.venusYears).toEqual(1);
+    });
   });
